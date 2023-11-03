@@ -2,14 +2,14 @@ name: Main Branch Tag Workflow
 
 on:
   push:
-    branches: 
+    branches:
       - main
     tags:
       - '*'
 
 jobs:
   say-hello:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted # Indique que ce job doit s'exécuter sur un runner auto-hébergé
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
